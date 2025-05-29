@@ -1,0 +1,13 @@
+.header {
+  color: #111;
+}
+
+.title {
+  padding-top: 4rem;
+  justify-self: center;
+}
+
+.description {
+  margin-top: 2rem;
+  justify-self: center;
+}

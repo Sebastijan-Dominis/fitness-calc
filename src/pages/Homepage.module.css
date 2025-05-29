@@ -1,0 +1,26 @@
+.btnContainer {
+  margin-top: 12rem;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btnContainer a {
+  display: inline-block;
+  background-color: chartreuse;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  border: solid rgb(30, 30, 245) 2px;
+  text-decoration: none;
+}
+
+.btnContainer a:hover {
+  background-color: rgb(30, 30, 245);
+  border-color: chartreuse;
+  color: #eee;
+}
+
+.btnContainer a:active {
+  transform: scale(0.98);
+}

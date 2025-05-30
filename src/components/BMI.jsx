@@ -11,8 +11,8 @@ function BMI() {
 
   function handleUnitChange(e) {
     setUnit(e.target.value);
-    setWeight(0);
-    setHeight(0);
+    setWeight();
+    setHeight();
   }
 
   const heightUnit = unit === "metric" ? "(cm)" : "(in)";
@@ -20,19 +20,18 @@ function BMI() {
 
   const bmi =
     unit === "metric"
-      ? (weight / (height / 100) ** 2).toFixed(2)
-      : ((703 * weight) / height ** 2).toFixed(2);
+      ? Number((weight / (height / 100) ** 2).toFixed(2))
+      : Number(((703 * weight) / height ** 2).toFixed(2));
 
   return (
     <div className="calcContainer">
-      <div className="twoCols">
-        <Select
-          title={"Choose a unit"}
-          unit={unit}
-          onHandleUnitChange={handleUnitChange}
-          options={["metric", "imperial"]}
-        />
-      </div>
+      <Select
+        title={"Choose a unit"}
+        unit={unit}
+        onHandleUnitChange={handleUnitChange}
+        options={["metric", "imperial"]}
+        customClass="twoCols"
+      />
       <Measurement
         unitValue={weight}
         onSetValue={setWeight}

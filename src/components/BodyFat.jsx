@@ -8,45 +8,49 @@ function Bodyfat() {
   const [sex, setSex] = useState("male");
   const [unit, setUnit] = useState("metric");
 
-  const [neck, setNeck] = useState(0);
-  const [waist, setWaist] = useState(0);
-  const [height, setHeight] = useState(0);
-  const [hip, setHip] = useState(0);
+  const [neck, setNeck] = useState();
+  const [waist, setWaist] = useState();
+  const [height, setHeight] = useState();
+  const [hip, setHip] = useState();
 
   const measurementUnit = unit === "metric" ? "cm" : "in";
 
   function handleSexChange(e) {
-    setNeck(0);
-    setWaist(0);
-    setHip(0);
-    setHeight(0);
+    setNeck();
+    setWaist();
+    setHip();
+    setHeight();
     setSex(e.target.value);
   }
 
   function handleUnitChange(e) {
-    setNeck(0);
-    setWaist(0);
-    setHip(0);
-    setHeight(0);
+    setNeck();
+    setWaist();
+    setHip();
+    setHeight();
     setUnit(e.target.value);
   }
 
   const bf =
     sex === "male"
-      ? (
-          495 /
-            (1.0324 -
-              0.19077 * Math.log10(waist - neck) +
-              0.15456 * Math.log10(height)) -
-          450
-        ).toFixed(2)
-      : (
-          495 /
-            (1.29579 -
-              0.35004 * Math.log10(waist + hip - neck) +
-              0.221 * Math.log10(height)) -
-          450
-        ).toFixed(2);
+      ? Number(
+          (
+            495 /
+              (1.0324 -
+                0.19077 * Math.log10(waist - neck) +
+                0.15456 * Math.log10(height)) -
+            450
+          ).toFixed(2)
+        )
+      : Number(
+          (
+            495 /
+              (1.29579 -
+                0.35004 * Math.log10(waist + hip - neck) +
+                0.221 * Math.log10(height)) -
+            450
+          ).toFixed(2)
+        );
 
   return (
     <div className="calcContainer">
@@ -67,17 +71,20 @@ function Bodyfat() {
         unitValue={neck}
         onSetValue={setNeck}
         title={`Neck circumference (${measurementUnit})`}
+        placeholder={"At narrowest"}
       />
       <Measurement
         unitValue={waist}
         onSetValue={setWaist}
         title={`Waist circumference (${measurementUnit})`}
+        placeholder={sex === "male" ? "At navel" : "At narrowest"}
       />
       <div className={sex === "male" && "twoCols"}>
         <Measurement
           unitValue={height}
           onSetValue={setHeight}
           title={`Height (${measurementUnit})`}
+          placeholder={`Your height in ${measurementUnit}`}
         />
       </div>
       {sex === "female" && (
@@ -85,6 +92,7 @@ function Bodyfat() {
           unitValue={hip}
           onSetValue={setHip}
           title={`Hip circumference (${measurementUnit})`}
+          placeholder={"At widest"}
         />
       )}
       <Result results={[bf]}>Your Bodyfat percentage is {bf}%.</Result>

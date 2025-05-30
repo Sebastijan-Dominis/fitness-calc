@@ -3,15 +3,14 @@ import { Outlet } from "react-router";
 import CalcHeader from "../components/CalcHeader";
 import Choice from "../components/Choice";
 
-function Fat() {
+function Strength() {
   return (
     <div>
-      <CalcHeader title={"Fat Calculators"} />
+      <CalcHeader title={"Strength calculators"} />
       <Choice
         calculators={[
-          ["BMI", "BMI"],
-          ["BodyFat", "BodyFat"],
-          ["FFMI", "FFMI"],
+          ["One rep max", "1RM"],
+          ["Wilks coefficient", "Wilks"],
         ]}
       />
       <Outlet />
@@ -19,4 +18,4 @@ function Fat() {
   );
 }
 
-export default Fat;
+export default Strength;

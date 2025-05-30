@@ -1,3 +1,8 @@
+:root {
+  --primary: rgb(100, 150, 15);
+  --secondary: rgb(70, 30, 230);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,4 +25,11 @@
   width: 14rem;
   grid-column: 1/-1;
   text-align: center;
+}
+
+.calcElement {
+  padding: 0.5rem 1rem;
+  background-color: burlywood;
+  border: 1px solid #111;
+  border-radius: 8px;
 }

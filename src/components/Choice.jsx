@@ -1,15 +1,19 @@
-import { NavLink } from "react-router";
 import styles from "./Choice.module.css";
+import { NavLink } from "react-router";
 
-const calculators = ["BMI", "BodyFat", "FFMI"];
+import MainBtn from "./MainBtn";
 
-function Choice() {
+function Choice({ calculators }) {
   return (
     <div>
       <ul className={styles.choice}>
         {calculators.map((calc) => (
-          <li key={calc}>
-            <NavLink to={calc.toLowerCase()}>{calc}</NavLink>
+          <li key={calc[1]}>
+            <NavLink to={calc[1]}>
+              {({ isActive }) => (
+                <MainBtn isActive={isActive}>{calc[0]}</MainBtn>
+              )}
+            </NavLink>
           </li>
         ))}
       </ul>

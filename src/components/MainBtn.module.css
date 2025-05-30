@@ -1,0 +1,24 @@
+.mainBtn {
+  background-color: var(--primary);
+  border-radius: 9999px;
+  border: solid var(--secondary) 2px;
+  text-decoration: none;
+  color: #000;
+}
+
+.mainBtn:hover {
+  background-color: var(--secondary);
+  border-color: var(--primary);
+  color: #eee;
+  cursor: pointer;
+}
+
+.mainBtn:active {
+  transform: scale(0.98);
+}
+
+.mainBtnActive {
+  background-color: var(--secondary);
+  border-color: var(--primary);
+  color: #eee;
+}

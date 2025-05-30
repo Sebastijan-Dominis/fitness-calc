@@ -1,11 +1,9 @@
 import styles from "./Result.module.css";
 
 function Result({ results, children }) {
+  console.log(results);
   const valid = !results
-    .map(
-      (result) =>
-        result !== "NaN" && result !== "Infinity" && result !== Infinity
-    )
+    .map((result) => Number.isFinite(result))
     .includes(false);
 
   return (

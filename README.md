@@ -68,16 +68,22 @@ Available npm scripts (from `package.json`):
 
 ## Screenshots
 
+### Main screen
 ![Main screen](screenshots/fitness-calc-1.png)
 
+### BMI calculator
 ![BMI calculator](screenshots/fitness-calc-2.png)
 
+### Body fat calculator
 ![Body fat calculator](screenshots/fitness-calc-3.png)
 
+### FFMI calculator
 ![FFMI calculator](screenshots/fitness-calc-4.png)
 
+### One rep max calculator
 ![One rep max calculator](screenshots/fitness-calc-5.png)
 
+### Wilks coefficient calculator
 ![Wilks coefficient calculator](screenshots/fitness-calc-6.png)
 
 ## License

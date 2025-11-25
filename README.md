@@ -15,6 +15,8 @@ The app is focused on simple, client-side calculations with a clean UI and suppo
 - [Scripts](#scripts)
 - [Screenshots](#screenshots)
 - [License](#license)
+- [Contributions](#contributions)
+- [Author & Contact](#author--contact)
 
 ## Tech stack
 
@@ -82,8 +84,9 @@ Available npm scripts (from `package.json`):
 
 See the `LICENSE` file in this repository for license details.
 
-**Contributions**
+## Contributions
 - Feel free to contribute if you wish. Open an issue or submit a pull request with a clear description of the change.
 
-**Contact**
-- Author: repository owner (see repository metadata).
+## Author & Contact
+- Author: Sebastijan Dominis
+- Contact: sebastijan.dominis99@gmail.com

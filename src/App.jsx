@@ -4,7 +4,7 @@ import styles from "./App.module.css";
 import Homepage from "./pages/Homepage";
 import Fat from "./pages/Fat";
 import BMI from "./components/BMI";
-import BodyFat from "./components/Bodyfat";
+import BodyFat from "./components/BodyFat";
 import FFMI from "./components/FFMI";
 import Strength from "./pages/Strength";
 import OneRepMax from "./components/OneRepMax";
